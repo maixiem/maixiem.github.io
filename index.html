@@ -13,11 +13,12 @@
 	100%{width:100%}
 }
 @keyframes blink{
-	0%{opacity:0}
-	100%{opacity:1}
+	0%{color:#ffffff}
+	100%{color: #000000}
 }
 
 body{
+	font-family: 'Ubuntu Mono', monospace;
 	background-color: #ffffff;
 	color: #66E329;
 	margin: 10%;
@@ -32,12 +33,9 @@ a{
 	text-decoration: underline;
 	color: #66E329;
 }
-div span{
-	width: 20px;
-	height: 5px;
-	vertical-align: text-bottom;
-	background-color: white;
-	animation: blink .5s steps(2) infinite;
+.fa-window-minimize{
+	color:white;
+	animation: blink 1s steps(2) infinite;
 }
 a:hover{
 	color: #000;
@@ -51,7 +49,7 @@ li{
 	height: 100%
 	padding: 20px;
 }
-.header{
+#content.header{
 	font: 25px bold;
 	padding: 10px;
 	white-space: nowrap;
@@ -62,7 +60,7 @@ li{
 </head>
 <body>
 <div id="content">
-<div class="header"><h1>Hello World</h1><span>.</span></div>
+<div class="header"><h1>Hello World</h1><i class="fa fa-window-minimize" aria-hidden="true"></i></div>
 <li><a href="/webGL.html">Working with webGL</a></li>
 <p>I'm hosted with GitHub Pages.</p>
 </div>
