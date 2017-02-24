@@ -6,8 +6,15 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @keyframes type{
-	from{width:0;}
-	to{width:100;}
+	0%{width:0%}
+	25%{width:25%}
+	50%{width:50%}
+	75%{width:75%}
+	100%{width:100%}
+}
+@keyframes blink{
+	0%{opacity:0}
+	100%{opacity:1}
 }
 
 body{
@@ -15,7 +22,7 @@ body{
 	color: #66E329;
 	margin: 10%;
 }
-div > h1 {
+div > h1 > p > a {
 	font-family: 'Ubuntu Mono', monospace;
 }
 b{
@@ -24,6 +31,13 @@ b{
 a{
 	text-decoration: underline;
 	color: #66E329;
+}
+div > span{
+	width: 20px;
+	height: 5px;
+	vertical-align: text-bottom;
+	background-color: white;
+	animation: blink .5s steps(2) infinite;
 }
 a:hover{
 	color: #000;
@@ -42,13 +56,13 @@ li{
 	padding: 10px;
 	white-space: nowrap;
 	overflow: hidden;
-	animation: type 5s steps(10);
+	animation: type 2s steps(10);
 }
 </style>
 </head>
 <body>
 <div id="content">
-<div class="header"><h1>Hello World</h1></div>
+<div class="header"><h1>Hello World</h1><span></span></div>
 <li><a href="/webGL.html">Working with webGL</a></li>
 <p>I'm hosted with GitHub Pages.</p>
 </div>
