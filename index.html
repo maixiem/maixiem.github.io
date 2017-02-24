@@ -5,13 +5,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@keyframes type{
+	from{width:0;}
+	to{width:100;}
+}
 
 body{
 	background-color: #ffffff;
 	color: #66E329;
 	margin: 10%;
 }
-div {
+div > h1 {
 	font-family: 'Ubuntu Mono', monospace;
 }
 b{
@@ -19,7 +23,6 @@ b{
 }
 a{
 	text-decoration: underline;
-	font-weight: bold;
 	color: #66E329;
 }
 a:hover{
@@ -29,11 +32,12 @@ a:hover{
 	background-color: #000000;
 	width: 80%;
 	height: 100%
-	margin: 10%;
+	padding: 10%;
 }
 .header{
 	font: 25px bold;
 	padding: 10px;
+	animation: type 5s steps(10);
 }
 </style>
 </head>
