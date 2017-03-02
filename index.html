@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Mai Xiem: index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
 <style>
@@ -22,6 +23,7 @@
 }
 
 body{
+	overflow: hidden;
 	font-family: 'Ubuntu Mono', monospace;
 	background-image: url('../assets/10012015.png');
 	background-size: cover;
@@ -52,15 +54,34 @@ a:hover{
 li{
 	list-style-type: decimal-leading-zero;
 }
-#content{
+#top{
 	background-color: #000000;
 	width: 80%;
 	height: 40%;
 	padding: 0px 20px 10px 20px;
-	margin: auto;
+	margin: 20px auto auto auto;
 	border-style: inset;
 	border-width: 2px;
+	position: fixed;
 }
+
+#cv {
+	top: calc(100% + 10px);
+	background-color: white;
+	height: 70%;
+	width: 80%;
+}
+
+div > button{
+	background-color: none;
+	border: none;
+	padding: auto;
+	text-align: left;
+	display: inline;
+	text-decoration: underline;
+	color: #66E329;
+}
+
 .tabby{
 	text-align: right;
 	width: 100%;
@@ -72,7 +93,7 @@ li{
 	white-space: nowrap;
 	width: 100%;
 	height: 0%;
-	animation: load-delay 4s steps(2);
+	animation: load-delay 3.5s steps(1);
 }
  .header{
 	white-space: nowrap;
@@ -81,16 +102,21 @@ li{
 	animation: type 3s steps(10);
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 </head>
 <body>
-<div id="content">
+<div id="top">
 <div class="tabby"><i class="fa fa-window-close" aria-hidden="true"></i></div>
 <div class="header">loading index.html...</div>
 <div class="delay"><p>Hi! This is the portfolio site of Mai Xiem, a programmer and artist. Images displayed behind the terminal are all drawn by me, and are randomly selected<br></br>from a repository. To view them all in a gallery, click link 02.</p>
-<li><a href="/webGL.html">CV/Resume</a></li>
-<li><a href="/">Illustrations</a></li>
-<li><a href="/">Code</a></li>
+<li><a href="#cv">CV/Resume</button></li>
+<li><button>Illustrations</button></li>
+<li><button>Code</button></li>
 <p>site and content (c) xiem 2017 / hosted with GitHub Pages<i class="fa fa-window-minimize" aria-hidden="true"></i></p></div>
+</div>
+<div id="bottom">
+<a name="cv"></a>
+ITS ME!!!!!
 </div>
 </body>
 </html>
