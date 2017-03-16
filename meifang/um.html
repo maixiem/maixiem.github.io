@@ -16,6 +16,8 @@
             <!-- external styles -->
             <link rel="stylesheet" type="text/css" href="anythingslider.css">
             <link rel="stylesheet" type="text/css" href="animate.css">
+            <link rel="stylesheet" type="text/css" href="theme-meifang.css">
+            <link rel="stylesheet" type="text/css" href="meifang.css">
             
             <!-- javascript -->
             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -25,10 +27,13 @@
             <script type="text/javascript">
             $(function () {
             $('#slider').anythingSlider({
-            theme: 'default',
+            theme: 'meifang',
 			expand       : true,
 			showMultiple : 1,
 			changeBy     : 1,
+			aspectRatio: true,
+			buildArrows: true,
+			buildStartStop: false,
 			navigationFormatter : function(index, panel){
       		return ' ';
     		}
