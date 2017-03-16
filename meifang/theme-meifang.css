@@ -137,7 +137,7 @@
 }
 
 /* back arrow */
-.anythingSlider-meifang .back { left: 0; }
+.anythingSlider-meifang .back { left: -30px; }
 .anythingSlider-meifang .back a { 
 width: 0;
 height: 0;
@@ -148,7 +148,7 @@ background-position: left top; }
 .anythingSlider-meifang .back a:hover,
 .anythingSlider-meifang .back a.hover { background-position: left -140px; }
 /* forward arrow */
-.anythingSlider-meifang .forward { right: 0; }
+.anythingSlider-meifang .forward { right: 30px; }
 .anythingSlider-meifang .forward a { 
 width: 0;
 height: 0;

@@ -18,8 +18,9 @@ article{
 	max-width: 34em;
 	margin: auto;
 	padding: 0 1em;
+	text-align: center;
 }
-h1 a {
+h1{
 	font-size: 2.747em;
 	color: #fff;
 }
