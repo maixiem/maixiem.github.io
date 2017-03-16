@@ -38,7 +38,7 @@
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-default .anythingControls a {
 	/* top shadow */
-	background: #777 url(../images/default.png) center -288px repeat-x;
+	background: #777;
 	color: #000;
 	border-radius: 0 0 5px 5px;
 	-moz-border-radius: 0 0 5px 5px;
