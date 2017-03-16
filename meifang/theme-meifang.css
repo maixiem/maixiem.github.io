@@ -38,11 +38,11 @@
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-meifang .anythingControls a {
 	/* top shadow */
-	background: #777;
+	background: #fff;
 	color: #000;
-	border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 /* Make sure navigation text is visible */
 .anythingSlider-meifang .anythingControls a span {
@@ -50,13 +50,14 @@
 }
 /* Navigation current button, default state */
 .anythingSlider-meifang .anythingControls a.cur {
-	background: #888;
+	background: #fff;
 	color: #000;
 }
 
 /* start-stop button, stopped, default state */
 .anythingSlider-meifang .anythingControls a.start-stop {
-	background-color: #040;
+	background-color: #fff;
+	opacity: .8;
 	color: #ddd;
 }
 /* start-stop button, playing, default state */
@@ -127,7 +128,7 @@
 	margin: -70px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: no-repeat;
+	background: red;
 }
 
 /* back arrow */
@@ -143,7 +144,7 @@
 
 /* Navigation Links */
 .anythingSlider-meifang .anythingControls { outline: 0; display: none; }
-.anythingSlider-meifang .anythingControls ul { margin: 0; padding: 0; float: left; }
+.anythingSlider-meifang .anythingControls ul { margin: 0; padding: 0; float: auto; }
 .anythingSlider-meifang .anythingControls ul li { display: inline; }
 .anythingSlider-meifang .anythingControls ul a {
 	font: 11px/18px Georgia, Serif;
