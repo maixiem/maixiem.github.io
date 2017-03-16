@@ -89,6 +89,8 @@
 /* Navigation buttons, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a {
 	/* background image = top shadow */
+	border-style: double;
+	opacity: 1;
 	background-color: #fff;
 }
 /* Navigation current & hovered button, active state */
@@ -96,6 +98,7 @@
 .anythingSlider-meifang.activeSlider .anythingControls a:hover {
 	/* background image removed */
 	border-style: double;
+	opacity: 1;
 	border-width: 5px;
 	background: #fff;
 }

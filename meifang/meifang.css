@@ -21,6 +21,11 @@ article{
 }
 h1 a {
 	font-size: 2.747em;
+	color: #fff;
+}
+/*need container for the inside of slides, to contain the pic floated left and text to the right in Another container positioned at the bottom to suit MP's pdf example. as them what fonts theyre trying to use, and also figure out what the sitch is with um. the buttons*/
+.slideWrapper{
+	
 }
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
