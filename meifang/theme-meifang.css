@@ -25,18 +25,18 @@
  Default state (no keyboard focus)
  ==================================*/
 /* Overall Wrapper */
-.anythingSlider-default {
+.anythingSlider-meifang {
 	margin: 0 auto;
 	/* 45px right & left padding for the arrows, 28px @ bottom for navigation */
 	padding: 0 45px 28px 45px;
 }
 /* slider window - top & bottom borders, default state */
-.anythingSlider-default .anythingWindow {
+.anythingSlider-meifang .anythingWindow {
 	border-top: none;
 	border-bottom: none;
 }
 /* Navigation buttons + start/stop button, default state */
-.anythingSlider-default .anythingControls a {
+.anythingSlider-meifang .anythingControls a {
 	/* top shadow */
 	background: #777;
 	color: #000;
@@ -45,30 +45,30 @@
 	-webkit-border-radius: 0 0 5px 5px;
 }
 /* Make sure navigation text is visible */
-.anythingSlider-default .anythingControls a span {
+.anythingSlider-meifang .anythingControls a span {
 	visibility: visible;
 }
 /* Navigation current button, default state */
-.anythingSlider-default .anythingControls a.cur {
+.anythingSlider-meifang .anythingControls a.cur {
 	background: #888;
 	color: #000;
 }
 
 /* start-stop button, stopped, default state */
-.anythingSlider-default .anythingControls a.start-stop {
+.anythingSlider-meifang .anythingControls a.start-stop {
 	background-color: #040;
 	color: #ddd;
 }
 /* start-stop button, playing, default state */
-.anythingSlider-default .anythingControls a.start-stop.playing {
+.anythingSlider-meifang .anythingControls a.start-stop.playing {
 	background-color: #800;
 }
 
 /* start-stop button, default hovered text color (when visible) */
 /* hide nav/start-stop background image shadow on hover - makes the button appear to come forward */
-.anythingSlider-default .anythingControls a.start-stop:hover,
-.anythingSlider-default .anythingControls a.start-stop.hover,
-.anythingSlider-default .anythingControls a.start-stop .anythingControls ul a:hover {
+.anythingSlider-meifang .anythingControls a.start-stop:hover,
+.anythingSlider-meifang .anythingControls a.start-stop.hover,
+.anythingSlider-meifang .anythingControls a.start-stop .anythingControls ul a:hover {
 	background-image: none;
 	color: #ddd;
 }
@@ -79,34 +79,34 @@
  =================================
 */
 /* slider window - top & bottom borders, active state */
-.anythingSlider-default.activeSlider .anythingWindow {
+.anythingSlider-meifang.activeSlider .anythingWindow {
 	border-color: #7C9127;
 }
 /* Navigation buttons, active state */
-.anythingSlider-default.activeSlider .anythingControls a {
+.anythingSlider-meifang.activeSlider .anythingControls a {
 	/* background image = top shadow */
 	background-color: #7C9127;
 }
 /* Navigation current & hovered button, active state */
-.anythingSlider-default.activeSlider .anythingControls a.cur,
-.anythingSlider-default.activeSlider .anythingControls a:hover {
+.anythingSlider-meifang.activeSlider .anythingControls a.cur,
+.anythingSlider-meifang.activeSlider .anythingControls a:hover {
 	/* background image removed */
 	background: #7C9127;
 }
 
 /* start-stop button, stopped, active state */
-.anythingSlider-default.activeSlider .anythingControls a.start-stop {
+.anythingSlider-meifang.activeSlider .anythingControls a.start-stop {
 	background-color: #080;
 	color: #fff;
 }
 /* start-stop button, playing, active state */
-.anythingSlider-default.activeSlider .anythingControls a.start-stop.playing {
+.anythingSlider-meifang.activeSlider .anythingControls a.start-stop.playing {
 	background-color: #d00;
 	color: #fff;
 }
 /* start-stop button, active slider hovered text color (when visible) */
-.anythingSlider-default.activeSlider .start-stop:hover,
-.anythingSlider-default.activeSlider .start-stop.hover {
+.anythingSlider-meifang.activeSlider .start-stop:hover,
+.anythingSlider-meifang.activeSlider .start-stop.hover {
 	color: #fff;
 }
 
@@ -114,38 +114,38 @@
   NAVIGATION POSITIONING
  ************************/
 /* Navigation Arrows */
-.anythingSlider-default .arrow {
+.anythingSlider-meifang .arrow {
 	top: 50%;
 	position: absolute;
 	display: block;
 }
 
-.anythingSlider-default .arrow a {
+.anythingSlider-meifang .arrow a {
 	display: block;
 	width: 45px;
 	height: 140px;
 	margin: -70px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: url(../images/default.png) no-repeat;
+	background: no-repeat;
 }
 
 /* back arrow */
-.anythingSlider-default .back { left: 0; }
-.anythingSlider-default .back a { background-position: left top; }
-.anythingSlider-default .back a:hover,
-.anythingSlider-default .back a.hover { background-position: left -140px; }
+.anythingSlider-meifang .back { left: 0; }
+.anythingSlider-meifang .back a { background-position: left top; }
+.anythingSlider-meifang .back a:hover,
+.anythingSlider-meifang .back a.hover { background-position: left -140px; }
 /* forward arrow */
-.anythingSlider-default .forward { right: 0; }
-.anythingSlider-default .forward a { background-position: right top; }
-.anythingSlider-default .forward a:hover,
-.anythingSlider-default .forward a.hover { background-position: right -140px; }
+.anythingSlider-meifang .forward { right: 0; }
+.anythingSlider-meifang .forward a { background-position: right top; }
+.anythingSlider-meifang .forward a:hover,
+.anythingSlider-meifang .forward a.hover { background-position: right -140px; }
 
 /* Navigation Links */
-.anythingSlider-default .anythingControls { outline: 0; display: none; }
-.anythingSlider-default .anythingControls ul { margin: 0; padding: 0; float: left; }
-.anythingSlider-default .anythingControls ul li { display: inline; }
-.anythingSlider-default .anythingControls ul a {
+.anythingSlider-meifang .anythingControls { outline: 0; display: none; }
+.anythingSlider-meifang .anythingControls ul { margin: 0; padding: 0; float: left; }
+.anythingSlider-meifang .anythingControls ul li { display: inline; }
+.anythingSlider-meifang .anythingControls ul a {
 	font: 11px/18px Georgia, Serif;
 	display: inline-block;
 	text-decoration: none;
@@ -157,13 +157,13 @@
 }
 
 /* navigationSize window */
-.anythingSlider-default .anythingControls .anythingNavWindow {
+.anythingSlider-meifang .anythingControls .anythingNavWindow {
 	overflow: hidden;
 	float: left;
 }
 
 /* Autoplay Start/Stop button */
-.anythingSlider-default .anythingControls .start-stop {
+.anythingSlider-meifang .anythingControls .start-stop {
 	padding: 2px 5px;
 	width: 40px;
 	text-align: center;
@@ -178,27 +178,27 @@
  ***********************/
 
 /* Navigation Arrows */
-.as-oldie .anythingSlider-default .arrow {
+.as-oldie .anythingSlider-meifang .arrow {
 	top: 30%;
 }
-.as-oldie .anythingSlider-default .arrow a {
+.as-oldie .anythingSlider-meifang .arrow a {
 	margin: 0;
 }
 
 /* margin between nav buttons just looks better */
-.as-oldie .anythingSlider-default .anythingControls li {
+.as-oldie .anythingSlider-meifang .anythingControls li {
 	margin-left: 3px;
 }
 
 /* When using the navigationSize option, the side margins need to be zero
 	None of the navigation panels look good in IE7 now =( */
-.as-oldie .anythingSlider-default .anythingControls a {
+.as-oldie .anythingSlider-meifang .anythingControls a {
 	margin: 0;
 }
-.as-oldie .anythingSlider-default .anythingNavWindow {
+.as-oldie .anythingSlider-meifang .anythingNavWindow {
 	margin: 0 2px;
 }
-.as-oldie .anythingSlider-default .anythingNavWindow li {
+.as-oldie .anythingSlider-meifang .anythingNavWindow li {
 	padding: 3px 0 0 0;
 }
 
