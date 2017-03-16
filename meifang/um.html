@@ -9,16 +9,35 @@
       <html>
          <!--<![endif]-->
          <head>
-            {MobileAppHeaders}
             <meta charset="utf-8">
             <title>this is a cry for hélp</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <link rel="shortcut icon" href="{Favicon}">
             <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
             <style>
+            	* {
+    			box-sizing: border-box;
+				}
 				img{
 				width: 100%;
 				height: auto;
+				}
+				.col-1 {width: 8.33%;}
+				.col-2 {width: 16.66%;}
+				.col-3 {width: 25%;}
+				.col-4 {width: 33.33%;}
+				.col-5 {width: 41.66%;}
+				.col-6 {width: 50%;}
+				.col-7 {width: 58.33%;}
+				.col-8 {width: 66.66%;}
+				.col-9 {width: 75%;}
+				.col-10 {width: 83.33%;}
+				.col-11 {width: 91.66%;}
+				.col-12 {width: 100%;}
+				[class*="col-"] {
+			    float: left;
+			    padding: 15px;
+			    border: 1px solid red;
 				}
                .slider {
                width: 100%;
@@ -35,12 +54,15 @@
                }
                #slide-0 {
                background-image: url(http://farm8.staticflickr.com/7347/8731666710_34d07e709e_z.jpg);
+               background-size: cover;
                }
                #slide-1 {
                background-image: url(http://farm8.staticflickr.com/7384/8730654121_05bca33388_z.jpg);
+               background-size: cover;
                }
                #slide-2 {
                background-image: url(http://farm8.staticflickr.com/7382/8732044638_9337082fc6_z.jpg);
+               background-size: cover;
                }
             </style>
          </head>
