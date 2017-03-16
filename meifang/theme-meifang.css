@@ -40,12 +40,12 @@
 	/* top shadow */
 	background: #fff;
 	color: #000;
-	border-radius: 8px;
-	border-width: 8px;
+	border-radius: 10px;
+	border-width: 5px;
 	border-style: solid;
 	opacity: .8;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 /* Make sure navigation text is visible */
 .anythingSlider-meifang .anythingControls a span {
@@ -61,7 +61,6 @@
 /* start-stop button, stopped, default state */
 .anythingSlider-meifang .anythingControls a.start-stop {
 	background-color: #fff;
-	opacity: .8;
 	color: #ddd;
 }
 /* start-stop button, playing, default state */
@@ -91,13 +90,13 @@
 .anythingSlider-meifang.activeSlider .anythingControls a {
 	/* background image = top shadow */
 	background-color: #fff;
-	border-style: double;
-	border-width: 5px;
 }
 /* Navigation current & hovered button, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a.cur,
 .anythingSlider-meifang.activeSlider .anythingControls a:hover {
 	/* background image removed */
+	border-style: double;
+	border-width: 5px;
 	background: #fff;
 }
 
@@ -131,7 +130,7 @@
 	display: block;
 	text-align: center;
 	outline: 0;
-	background: red;
+	background: transparent;
 }
 
 /* back arrow */
