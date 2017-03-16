@@ -3,8 +3,11 @@ img {
 	height: 100%;
 }
 body {
-	background-color: #fff;
+	background-color: #000;
 	padding: 10px;
+	height: auto;
+}
+section{
 	height: 100%;
 }
 /* #### Mobile Phones Portrait #### */
