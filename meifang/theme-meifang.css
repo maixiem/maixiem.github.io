@@ -40,9 +40,12 @@
 	/* top shadow */
 	background: #fff;
 	color: #000;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 8px;
+	border-width: 8px;
+	border-style: solid;
+	opacity: .8;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
 }
 /* Make sure navigation text is visible */
 .anythingSlider-meifang .anythingControls a span {
@@ -52,6 +55,7 @@
 .anythingSlider-meifang .anythingControls a.cur {
 	background: #fff;
 	color: #000;
+	opacity: .8;
 }
 
 /* start-stop button, stopped, default state */
@@ -86,13 +90,15 @@
 /* Navigation buttons, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a {
 	/* background image = top shadow */
-	background-color: #7C9127;
+	background-color: #fff;
+	border-style: double;
+	border-width: 5px;
 }
 /* Navigation current & hovered button, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a.cur,
 .anythingSlider-meifang.activeSlider .anythingControls a:hover {
 	/* background image removed */
-	background: #7C9127;
+	background: #fff;
 }
 
 /* start-stop button, stopped, active state */
@@ -123,9 +129,6 @@
 
 .anythingSlider-meifang .arrow a {
 	display: block;
-	width: 45px;
-	height: 140px;
-	margin: -70px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
 	background: red;
@@ -133,12 +136,23 @@
 
 /* back arrow */
 .anythingSlider-meifang .back { left: 0; }
-.anythingSlider-meifang .back a { background-position: left top; }
+.anythingSlider-meifang .back a { 
+width: 0;
+height: 0;
+border-top: 50px solid transparent;
+border-right: 100px solid red;
+border-bottom: 50px solid transparent;
+background-position: left top; }
 .anythingSlider-meifang .back a:hover,
 .anythingSlider-meifang .back a.hover { background-position: left -140px; }
 /* forward arrow */
 .anythingSlider-meifang .forward { right: 0; }
-.anythingSlider-meifang .forward a { background-position: right top; }
+.anythingSlider-meifang .forward a { 
+width: 0;
+height: 0;
+border-top: 50px solid transparent;
+border-left: 100px solid red;
+border-bottom: 50px solid transparent;background-position: right top; }
 .anythingSlider-meifang .forward a:hover,
 .anythingSlider-meifang .forward a.hover { background-position: right -140px; }
 
