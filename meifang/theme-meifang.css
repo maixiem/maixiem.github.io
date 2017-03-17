@@ -38,14 +38,7 @@
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-meifang .anythingControls a {
 	/* top shadow */
-	background: #fff;
 	color: #000;
-	border-radius: 10px;
-	border-width: 5px;
-	border-style: solid;
-	opacity: .8;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 }
 /* Make sure navigation text is visible */
 .anythingSlider-meifang .anythingControls a span {
@@ -53,9 +46,7 @@
 }
 /* Navigation current button, default state */
 .anythingSlider-meifang .anythingControls a.cur {
-	background: #fff;
 	color: #000;
-	opacity: .8;
 }
 
 /* start-stop button, stopped, default state */
@@ -89,18 +80,21 @@
 /* Navigation buttons, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a {
 	/* background image = top shadow */
-	border-style: double;
-	opacity: 1;
-	background-color: #fff;
+  border: red solid 4px;
+  border-radius: 12px;
+	opacity: .7;
+  background: transparent;
 }
 /* Navigation current & hovered button, active state */
 .anythingSlider-meifang.activeSlider .anythingControls a.cur,
 .anythingSlider-meifang.activeSlider .anythingControls a:hover {
 	/* background image removed */
-	border-style: double;
+  border: red inset 4px;
+  border-radius: 12px;
+  width: 0px;
+  height: 0px;
 	opacity: 1;
-	border-width: 5px;
-	background: #fff;
+	background: transparent;
 }
 
 /* start-stop button, stopped, active state */
@@ -122,6 +116,7 @@
 /************************
   NAVIGATION POSITIONING
  ************************/
+
 /* Navigation Arrows */
 .anythingSlider-meifang .arrow {
 	top: 50%;
@@ -131,44 +126,41 @@
 
 .anythingSlider-meifang .arrow a {
 	display: block;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: transparent;
+	background: url(assets/arrow.png) no-repeat;
 }
 
 /* back arrow */
-.anythingSlider-meifang .back { left: -30px; }
-.anythingSlider-meifang .back a { 
-width: 0;
-height: 0;
-border-top: 50px solid transparent;
-border-right: 100px solid red;
-border-bottom: 50px solid transparent;
-background-position: left top; }
+.anythingSlider-meifang .back { left: -100px; }
+.anythingSlider-meifang .back a { opacity: .7; background-position: left top; }
 .anythingSlider-meifang .back a:hover,
-.anythingSlider-meifang .back a.hover { background-position: left -140px; }
+.anythingSlider-meifang .back a.hover { opacity: 1; }
 /* forward arrow */
-.anythingSlider-meifang .forward { right: 30px; }
-.anythingSlider-meifang .forward a { 
-width: 0;
-height: 0;
-border-top: 50px solid transparent;
-border-left: 100px solid red;
-border-bottom: 50px solid transparent;background-position: right top; }
+.anythingSlider-meifang .forward { right: -100px; }
+.anythingSlider-meifang .forward a { opacity: .7; background-position: right top;
+-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";}
 .anythingSlider-meifang .forward a:hover,
-.anythingSlider-meifang .forward a.hover { background-position: right -140px; }
+.anythingSlider-meifang .forward a.hover { opacity: 1; }
 
 /* Navigation Links */
 .anythingSlider-meifang .anythingControls { outline: 0; display: none; }
-.anythingSlider-meifang .anythingControls ul { margin: 0; padding: 0; float: auto; }
+.anythingSlider-meifang .anythingControls ul { text-align: center; margin: 0; padding: 0px; float: auto; background-color: transparent; }
 .anythingSlider-meifang .anythingControls ul li { display: inline; }
 .anythingSlider-meifang .anythingControls ul a {
-	font: 11px/18px Georgia, Serif;
 	display: inline-block;
 	text-decoration: none;
-	padding: 2px 8px;
-	height: 18px;
-	margin: 0 5px 0 0;
+	padding: 8px;
+	height: 0px;
+	margin: 0 25px 0 0;
 	text-align: center;
 	outline: 0;
 }
@@ -237,7 +229,6 @@ border-bottom: 50px solid transparent;background-position: right top; }
 }
 /* anythingSlider base (original element) */
 .anythingSlider .anythingBase {
-	background: transparent;
 	list-style: none;
 	position: absolute;
 	overflow: visible !important;
