@@ -22,13 +22,17 @@ p {
   font-family: 'Garamond Pro';
   font size: 1em;
 }
+
 footer {
   font-family: 'Garamond Pro';
   font size: 1em;
   text-align: center;
 }
+header {
+  padding: 2% 0%;
+}
 section{
-  top: 10%;
+  top: 0;
   height: 100%;
 }
 article{
@@ -62,7 +66,7 @@ h3 {
   width: 100%;
 }
 .imgwrapper{
-  width: 49%;
+  width: 50%;
   height: auto;
   margin: 0px;
   padding: 3% 0% 0% 0%;
@@ -72,21 +76,23 @@ h3 {
 .textwrapper{
   width: 50%;
   position: relative;
-  top: 0px;
-  height: auto;
+  bottom: 1%;
+  height: 100%;
   float: right;
   text-align: left;
 }
 
 .textcontain {
   position: absolute;
+  margin: 10%;
+  bottom: 0;
   padding: 10%;
-  bottom: 10%;
   width: 50%;
+  background: white;
 }
 /* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  section{
+@media screen and (min-device-width: 0px) and (max-device-width: 480px) and (orientation: portrait){
+  header{
     min-height: 320px;
   }
     .anythingSlider-meifang .arrow {
@@ -95,8 +101,8 @@ h3 {
 }
 
 /* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  section{
+@media screen and (min-device-width: 0px) and (max-device-width: 640px) and (orientation: landscape){
+  header{
     min-height: 480px;
   }
     .anythingSlider-meifang .arrow {
@@ -105,7 +111,7 @@ h3 {
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px){
+@media screen and (min-device-width: 0px) and (max-device-width: 640px){
     .anythingSlider-meifang .arrow {
 	display: none;
 }
@@ -113,54 +119,60 @@ h3 {
 
 /* #### iPhone 4+ Portrait or Landscape #### */
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
+  .anythingSlider-meifang .arrow {
+	display: none;
+}
 }
 
 /* #### iPhone 5 Portrait or Landscape #### */
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
+  .anythingSlider-meifang .arrow {
+	display: none;
+}
 }
 
 /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-  /* some CSS here */
+  /.anythingSlider-meifang .arrow {
+	display: none;
+}
 }
 
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  section{
+  header{
     min-height: 640px;
   }
 }
 
 /* #### Desktops #### */
-@media screen and (min-width: 800px){
-  section{
+@media screen and (min-width: 0px) and (max-width: 800px){
+  header{
     min-height: calc(600px - 3em);
   }
   .anythingSlider-meifang .arrow {
 	display: none;
 }
 }
-@media screen and (min-width: 1024px){
-  section{
-    min-height: calc(600px - 3em);
+@media screen and (min-width: 801px) and (max-width: 1024px){
+  header{
+    min-height: calc(600px - 8em);
   }
     .anythingSlider-meifang .arrow {
 	display: block;
 }
 }
-@media screen and (min-width: 1280px){
-  section{
-    min-height: calc(720px - 3em);
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+  header{
+    min-height: calc(720px - 8em);
   }
   .anythingSlider-meifang .arrow {
 	display: block;
 }
 }
-@media screen and (min-width: 1360px){
-  section{
-    min-height: calc(768px - 3em);
+@media screen and (min-width: 1281px){
+  header{
+    min-height: calc(768px - 8em);
   }
   .anythingSlider-meifang .arrow {
 	display: block;
