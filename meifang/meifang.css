@@ -11,7 +11,7 @@ body {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #fff;
   padding: 10px;
   height: auto;
