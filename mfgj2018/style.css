@@ -1,7 +1,8 @@
 body{
-text-align: center;
-width: 100%;
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 canvas{
-display: inline;
+  display: inline !important;
 }
