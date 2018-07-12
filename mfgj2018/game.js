@@ -10,6 +10,7 @@ function preload() {
 
 function create() {
     var s = game.add.sprite(80, 0, 'bg');
+    s.scale.setTo(4,4);
 }
 
 function update() {
