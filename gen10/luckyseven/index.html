@@ -5,27 +5,47 @@ body{
 text-align: center;
 font-family: 'Comic Sans';
 }
+.hide{
+  display: none;
+ }
 </style>
 </head>
 <body>
 <header><h1>Lucky Sevens</h1></header>
-<div role="form">
+<section role="form">
 <div id="bet-money-input-group">
 Starting bet: $<input type="number" placeholder="0.00">
-</div>
+</section>
 <button id="play-button" type="button">
 Play!
 </button>
+  <div id="error"></div>
+  <hr></hr>
+  <section id="results" class="hide">
+    <header><h1>Results</h1></header>
+    <table>
+      <span id="starting-bet-label">Starting Bet</span><span id="starting-bet-value"></span>
+      <span id="total-rolls-before-zero-label">Total Rolls Before Going Broke</span><span id="total-rolls-before-zero-value"></span>
+      <span id="highest-amount-won-label">Highest Amount Won</span><span id="highest-amount-won-value"></span>
+      <span id="roll-count-at-highest-amount-label">Starting Bet</span><span id="roll-count-at-highest-amount-value"></span>
+    </table>
+  </section>
 </div>
 <script>
 document.getElementById("play-button").addEventListener("click", (e) => {
-  console.log(e);
-  getMoney();
+  if(!getMoney()){
+    document.getElementById("error").innerHTML = "You can't play with a starting bet of $0!";
+  }else if(getMoney().typeOf != "number"){
+    document.getElementById("error").innerHTML = "You need to enter a number to play!";
+  }else{
+    document.getElementById("result").classList.toggle("hide");
+  }
+    
   console.log(rollDice());
 });
 
 function getMoney(){
-  console.log(document.querySelector("input[type=number]").value);
+ return document.querySelector("input[type=number]").value;
 }
 
 function rollDice(){
