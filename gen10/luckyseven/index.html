@@ -8,12 +8,15 @@ font-family: 'Comic Sans';
 .hide{
   display: none;
  }
-#table:nth-child(odd)::after{
-  content: "\a";
-  white-space: pre;
-}
- span:nth-child(2n){
-   background-color: #eee;
+  span{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  span[label]{
+    font-weight: bold;
+    width: 150px;
   }
 </style>
 </head>
@@ -31,10 +34,13 @@ Play!
   <section id="results" class="hide">
     <header><h1>Results</h1></header>
     <div id="table" role="table">
-      <span id="starting-bet-label">Starting Bet</span><span id="starting-bet-value"></span>
-      <span id="total-rolls-before-zero-label">Total Rolls Before Going Broke</span><span id="total-rolls-before-zero-value"></span>
-      <span id="highest-amount-won-label">Highest Amount Won</span><span id="highest-amount-won-value"></span>
-      <span id="roll-count-at-highest-amount-label">Starting Bet</span><span id="roll-count-at-highest-amount-value"></span>
+      <span label id="starting-bet-label">Starting Bet</span><span id="starting-bet-value"></span>
+      <br>
+      <span label id="total-rolls-before-zero-label">Total Rolls Before Going Broke</span><span id="total-rolls-before-zero-value"></span>
+      <br>
+      <span label id="highest-amount-won-label">Highest Amount Won</span><span id="highest-amount-won-value"></span>
+      <br>
+      <span label id="roll-count-at-highest-amount-label">Roll count at highest amount</span><span id="roll-count-at-highest-amount-value"></span>
     </div>
   </section>
 </div>
@@ -44,12 +50,14 @@ document.getElementById("play-button").addEventListener("click", (e) => {
     document.getElementById("error").innerHTML = "You can't play with a starting bet of $0!";
   }else{
     var startingBet = getMoney();
+    console.log("Staring bet: " + startingBet);
     document.getElementById("starting-bet-value").innerHTML = startingBet;
     
     var currentMoney = startingBet;
     var totalRolls = 0;
     var highestAmount = currentMoney;
     var rollsAtHighestAmount = 0;
+    
 
     while(currentMoney > 0){
       var newMoney;
@@ -65,6 +73,7 @@ document.getElementById("play-button").addEventListener("click", (e) => {
         rollsAtHighestAmount = totalRolls;
      }
      currentMoney = newMoney; 
+      console.log("Current Money: " + currentMoney);
     }
     document.getElementById("total-rolls-before-zero-value").innerHTML = totalRolls;
     document.getElementById("highest-amount-won-value").innerHTML = highestAmount;
