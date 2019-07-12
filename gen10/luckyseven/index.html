@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+body{
+text-align: center;
+font-family: 'Comic Sans';
+}
+</style>
+</head>
+<body>
+<header><h1>Lucky Sevens</h1></header>
+<div role="form">
+<div id="bet-money-input-group">
+Starting bet: $<input type="number" placeholder="0.00">
+</div>
+<button id="play-button" type="button>
+Play!
+</button>
+</div>
+<script>
+document.getElementById("play-button").addEventListener("click", (e) => {
+  console.log(e);
+  getMoney();
+  console.log(rollDice());
+});
+
+function getMoney(){
+  console.log(document.querySelector("input[type=number]").value);
+}
+
+function rollDice(){
+  return Math.floor(Math.random() * 7) + 1;     
+}
+</script>
+</body>
+</html>
