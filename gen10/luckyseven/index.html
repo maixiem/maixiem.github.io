@@ -9,10 +9,11 @@ font-family: 'Comic Sans';
   display: none;
  }
 span:nth-child(odd)::after{
-  content: "<br>";
+  content: "\a";
+  white-space: pre;
 }
  span:nth-child(2n){
-   background-color: #efe;
+   background-color: #eee;
   }
 </style>
 </head>
@@ -39,22 +40,36 @@ Play!
 </div>
 <script>
 document.getElementById("play-button").addEventListener("click", (e) => {
-  if(getMoney() <= 0){
+  if(getMoney() <= 0 || getMoney().isNaN()){
     document.getElementById("error").innerHTML = "You can't play with a starting bet of $0!";
   }else{
     var startingBet = getMoney();
+    document.getElementById("starting-bet-value").innerHTML = startingBet;
+    
     var currentMoney = startingBet;
-    console.log(startingBet);
+    var totalRolls = 0;
+    var highestAmount = currentMoney;
+    var rollsAtHighestAmount = 0;
+
     while(currentMoney > 0){
+      var newMoney;
       var diceSum = rollDice() + rollDice();
     if(diceSum != 7){
-      currentMoney = currentMoney - 1;
+      newMoney = currentMoney - 1;
     }else{
-      currentMoney = currentMoney + 4;
+      newMoney = currentMoney + 4;
     }
-      console.log(currentMoney);
+      totalRolls = totalRolls + 1;
+    if(newMoney > highestAmount){
+        highestAmount = newMoney;
+        rollsAtHighestAmount = totalRolls;
+     }
+      
     }
-    document.getElementById("result").classList.toggle("hide");
+    document.getElementById("total-rolls-before-zero-value").innerHTML = totalRolls;
+    document.getElementById("highest-amount-won-value").innerHTML = highestAmount;
+    document.getElementById("roll-count-at-highest-amount-value").innerHTML = rollsAtHighestAmount;
+    document.getElementById("results").classList.toggle("hide");
   }
   console.log(rollDice());
 });
