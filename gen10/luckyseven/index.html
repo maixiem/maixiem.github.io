@@ -64,7 +64,7 @@ document.getElementById("play-button").addEventListener("click", (e) => {
         highestAmount = newMoney;
         rollsAtHighestAmount = totalRolls;
      }
-      
+     currentMoney = newMoney; 
     }
     document.getElementById("total-rolls-before-zero-value").innerHTML = totalRolls;
     document.getElementById("highest-amount-won-value").innerHTML = highestAmount;
