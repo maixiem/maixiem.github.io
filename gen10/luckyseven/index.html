@@ -33,14 +33,13 @@ Play!
 </div>
 <script>
 document.getElementById("play-button").addEventListener("click", (e) => {
-  if(!getMoney()){
+  if(getMoney() <=0){
     document.getElementById("error").innerHTML = "You can't play with a starting bet of $0!";
   }else if(getMoney().typeOf != "number"){
-    document.getElementById("error").innerHTML = "You need to enter a number to play!";
+    document.getElementById("error").innerHTML = getMoney().typeOf;
   }else{
     document.getElementById("result").classList.toggle("hide");
   }
-    
   console.log(rollDice());
 });
 
