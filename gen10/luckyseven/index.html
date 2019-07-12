@@ -8,7 +8,7 @@ font-family: 'Comic Sans';
 .hide{
   display: none;
  }
-span:nth-child(odd)::after{
+#table:nth-child(odd)::after{
   content: "\a";
   white-space: pre;
 }
@@ -30,12 +30,12 @@ Play!
   <hr></hr>
   <section id="results" class="hide">
     <header><h1>Results</h1></header>
-    <table>
+    <div id="table" role="table">
       <span id="starting-bet-label">Starting Bet</span><span id="starting-bet-value"></span>
       <span id="total-rolls-before-zero-label">Total Rolls Before Going Broke</span><span id="total-rolls-before-zero-value"></span>
       <span id="highest-amount-won-label">Highest Amount Won</span><span id="highest-amount-won-value"></span>
       <span id="roll-count-at-highest-amount-label">Starting Bet</span><span id="roll-count-at-highest-amount-value"></span>
-    </table>
+    </div>
   </section>
 </div>
 <script>
