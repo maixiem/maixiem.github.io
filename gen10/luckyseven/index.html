@@ -39,11 +39,21 @@ Play!
 </div>
 <script>
 document.getElementById("play-button").addEventListener("click", (e) => {
-  if(getMoney() <=0){
+  if(getMoney() <= 0){
     document.getElementById("error").innerHTML = "You can't play with a starting bet of $0!";
-  }else if(getMoney().typeOf != "number"){
-    document.getElementById("error").innerHTML = getMoney().typeOf;
   }else{
+    var startingBet = getMoney();
+    var currentMoney = startingBet;
+    console.log(startingBet);
+    while(currentMoney > 0){
+      var diceSum = rollDice() + rollDice();
+    if(diceSum != 7){
+      currentMoney = currentMoney - 1;
+    }else{
+      currentMoney = currentMoney + 4;
+    }
+      console.log(currentMoney);
+    }
     document.getElementById("result").classList.toggle("hide");
   }
   console.log(rollDice());
