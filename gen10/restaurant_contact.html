@@ -114,6 +114,8 @@
                                   if (form.checkValidity() === false) {
                                   event.preventDefault();
                                   event.stopPropagation();
+                                  }else{
+                                      document.getElementById('confirmValidation');
                                   }
                                   form.classList.add('was-validated');
                                });
