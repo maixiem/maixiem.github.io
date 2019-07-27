@@ -121,6 +121,10 @@ The Restaurant that Serves You Nothing
     });
   }, false);
 })();
+        document.querySelector('.btn.btnprimary').addEventListener('click',function(){
+          event.preventDefault();
+          event.stopPropagation();
+        });
 </script>
     </div>
     <div role="presentation" class="col-sm">
