@@ -4,7 +4,8 @@
 		<meta charset="UTF-8">
 		<title>Out in the Rain</title>
 		<script>
-			var words = array("hi","hello","what's up");
+			var words = ["hi","hello","what's up"];
+			var reply = {"hi":"well hey","hello":"hello to you too", "what's up": "oh, nothing"};
 			var brain = {known_words: words, responses: reply};
 			
 			document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +14,7 @@
 						 if (event.keyCode === 13) {
 						 	event.preventDefault();
 							var user_words = e.target.value;
-							 
+							 document.getElemetnById('output').innerHTML += reply[user_words];
 							console.log(brain.words.includes(user_words));
 						 }
 				});
@@ -30,6 +31,7 @@
 	</head>
 	<body>
 		<div id="chat_pane">
+			<div id="output"></div>
 			<input type="text">
 		</div>
 	</body>
