@@ -3,9 +3,26 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Out in the Rain</title>
-		<script type="text/javascript" src="//mfgj2018/game.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				document.querySelector('#chat_pane input')
+					.addEventListener('input', function(e){
+						console.log(e);
+				};
+		})
+		</script>
+		<style>
+			body{
+				margin: 0;
+			}
+			#chat_pane{
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	<body>
-
+		<div id="chat_pane">
+			<input type="text">
+		</div>
 	</body>
 </html>
